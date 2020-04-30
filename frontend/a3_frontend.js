@@ -9,17 +9,15 @@ function upload(e) {
     e.preventDefault();
     console.log('in upload function');
     var fileInput = document.getElementById("myFile");
-    console.log(fileInput)
     var file = fileInput.files[0];
     console.log(file)
     var filename = file.name;
     var extension = file.type;
-    console.log(filename)
-    console.log(extension)
     let config = {
         headers: {'Content-Type': 'multipart/form-data', "X-Api-Key": "thisisatestkey1234567890"}
     };  //添加请求头
-    url = 'https://me8p5df1qc.execute-api.us-east-1.amazonaws.com/prod/upload/ccc-assignment3-b2/' + file.name
+    var url = 'https://me8p5df1qc.execute-api.us-east-1.amazonaws.com/prod/upload/ccc-assignment3-b2/' + file.name
+    console.log(url)
 
     $.ajax({
         url: url,
