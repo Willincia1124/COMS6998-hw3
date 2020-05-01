@@ -2,14 +2,14 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: Search Photo Lambda
 Resources:
-  SearchPhotoLambda1:
+  SearchPhotoLambda:
     Type: 'AWS::Serverless::Function'
     Properties:
-      FunctionName: search-photos2
+      FunctionName: search-photos
       Handler: search-photos.lambda_handler
       Runtime: python3.6
       CodeUri: ./Lambda Functions/search-photos.py
-      Description: 'Lambda function for Search Photo 2'
+      Description: 'Lambda function for Search Photo'
       MemorySize: 128
       Timeout: 30
       Role: 'arn:aws:iam::710827020694:role/service-role/testroleLambda'
@@ -25,14 +25,14 @@ Resources:
         SubnetIds:
           - subnet-3d799b1c
           - subnet-4349fe0e
-  IndexPhotoLambda1:
+  IndexPhotoLambda:
     Type: 'AWS::Serverless::Function'
     Properties:
-      FunctionName: index-photos2
+      FunctionName: index-photos
       Handler: index-photos.lambda_handler
       Runtime: python3.6
       CodeUri: ./Lambda Functions/index-photos.py
-      Description: 'Lambda function for Index Photo 2'
+      Description: 'Lambda function for Index Photo'
       MemorySize: 128
       Timeout: 30
       Role: 'arn:aws:iam::710827020694:role/service-role/testroleLambda'
