@@ -71,12 +71,12 @@ export const sendSearchQuery = function (query) {
             // Add success callback code here.
             console.log('success OK');
             console.log(result);
-            displayImage(result.data.results.items, query);
-        }).catch(function (result) {
-        // Add error callback code here.
-        console.log('no corresponding photos');
-        console.log(result)
-    });
+            displayImage(result.data.results.items.url, query);
+        }).catch(function (err) {
+            // Add error callback code here.
+            console.log('no corresponding photos');
+            console.log(err);
+        });
 };
 
 
@@ -95,16 +95,7 @@ function displayImage(images, query) {
         image_display_text.innerHTML = "Results for " + query;
     }
 
-    const imageObj = JSON.parse(images);
-    // console.log(imageObj.url);
-    if (imageObj.url === "No such photos found.") {
-        image_display_text.innerHTML = "No photo for " + query;
-        return;
-    } else {
-        image_display_text.innerHTML = "Results for " + query;
-    }
-
-    imageObj.url.forEach(imgUrl => {
+    images.forEach(imgUrl => {
         try {
             const img = document.createElement("img");
             img.src = imgUrl;
