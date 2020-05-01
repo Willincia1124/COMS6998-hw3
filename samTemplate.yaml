@@ -14,11 +14,6 @@ Resources:
       Timeout: 30
       Role: 'arn:aws:iam::710827020694:role/service-role/AWSCodePipelineServiceRole-us-east-1-P1'
       Events:
-        getAZsAPI:
-          Type: Api
-          Properties:
-            Path: /getazs
-            Method: get
       Environment:
         Variables:
           REGION: us-east-1
@@ -37,3 +32,4 @@ Resources:
       Environment:
         Variables:
           REGION: us-east-1
+  
