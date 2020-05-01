@@ -9,7 +9,7 @@ Resources:
       Handler: search-photos.lambda_handler
       Runtime: python3.6
       CodeUri: ./Lambda Functions/search-photos.py
-      Description: 'Lambda function for Search Photo'
+      Description: 'Lambda function for Search Photo 2'
       MemorySize: 128
       Timeout: 30
       Role: 'arn:aws:iam::710827020694:role/service-role/search-photo-test-role'
@@ -32,7 +32,7 @@ Resources:
       Handler: index-photos.lambda_handler
       Runtime: python3.6
       CodeUri: ./Lambda Functions/index-photos.py
-      Description: 'Lambda function for Index Photo'
+      Description: 'Lambda function for Index Photo 2'
       MemorySize: 128
       Timeout: 30
       Role: 'arn:aws:iam::710827020694:role/service-role/index-photos-test-role'
