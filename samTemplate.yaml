@@ -27,9 +27,21 @@ Resources:
       Description: 'Lambda function for Index Photo'
       MemorySize: 128
       Timeout: 30
-      Role: 'arn:aws:iam::710827020694:role/testroleLambda'
+      Role: 'arn:aws:iam::710827020694:role/service-role/index-photos-test-role'
       Events:
-      Environment:
-        Variables:
-          REGION: us-east-1
+        BucketEvent1:
+          Type: S3
+          Properties:
+            Bucket:
+              Ref: Bucket1
+            Events:
+              - 's3:ObjectCreated:Put'
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-0046592b
+        SubnetIds:
+          - subnet-3d799b1c
+          - subnet-4349fe0e
+  Bucket1:
+    Type: 'AWS::S3::Bucket'
   
