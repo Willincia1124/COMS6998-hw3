@@ -6,7 +6,6 @@ import boto3
 import json
 import uuid
 import datetime
-import math
 
 def detect_labels(photo, bucket):
     response = boto3.client('rekognition').detect_labels(
