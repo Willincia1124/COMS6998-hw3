@@ -5,7 +5,7 @@ Resources:
   SearchPhotoLambda:
     Type: 'AWS::Serverless::Function'
     Properties:
-      FunctionName: search-photos1
+      FunctionName: search-photos2
       Handler: search-photos.lambda_handler
       Runtime: python3.6
       CodeUri: ./Lambda Functions/search-photos.py
@@ -28,7 +28,7 @@ Resources:
   IndexPhotoLambda:
     Type: 'AWS::Serverless::Function'
     Properties:
-      FunctionName: index-photos1
+      FunctionName: index-photos2
       Handler: index-photos.lambda_handler
       Runtime: python3.6
       CodeUri: ./Lambda Functions/index-photos.py
