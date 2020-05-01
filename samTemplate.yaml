@@ -5,10 +5,10 @@ Resources:
   SearchPhotoLambda:
     Type: 'AWS::Serverless::Function'
     Properties:
-      FunctionName: search-photos
+      FunctionName: search-photos1
       Handler: search.lambda_handler
       Runtime: python3.6
-      CodeUri: ./Lambda Functions
+      CodeUri: ./Lambda Functions/search-photos.py
       Description: 'Lambda function for Search Photo'
       MemorySize: 128
       Timeout: 30
@@ -20,10 +20,10 @@ Resources:
   IndexPhotoLambda:
     Type: 'AWS::Serverless::Function'
     Properties:
-      FunctionName: index-photos
+      FunctionName: index-photos1
       Handler: index-photos.lambda_handler
       Runtime: python3.6
-      CodeUri: ./Lambda Functions
+      CodeUri: ./Lambda Functions/index-photos.py
       Description: 'Lambda function for Index Photo'
       MemorySize: 128
       Timeout: 30
