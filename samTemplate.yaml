@@ -14,17 +14,6 @@ Resources:
       Timeout: 30
       Role: 'arn:aws:iam::710827020694:role/service-role/testroleLambda'
       Events:
-        Api1:
-          Type: Api
-          Properties:
-            Path: /search
-            Method: GET
-      VpcConfig:
-        SecurityGroupIds:
-          - sg-0046592b
-        SubnetIds:
-          - subnet-3d799b1c
-          - subnet-4349fe0e
   IndexPhotoLambda:
     Type: 'AWS::Serverless::Function'
     Properties:
@@ -37,19 +26,4 @@ Resources:
       Timeout: 30
       Role: 'arn:aws:iam::710827020694:role/service-role/testroleLambda'
       Events:
-        BucketEvent1:
-          Type: S3
-          Properties:
-            Bucket:
-              Ref: Bucket1
-            Events:
-              - 's3:ObjectCreated:Put'
-      VpcConfig:
-        SecurityGroupIds:
-          - sg-0046592b
-        SubnetIds:
-          - subnet-3d799b1c
-          - subnet-4349fe0e
-  Bucket1:
-    Type: 'AWS::S3::Bucket'
   
