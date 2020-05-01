@@ -1,7 +1,6 @@
 import json
 import requests
 import boto3
-import math
 import string
 
 ES_URL = "https://vpc-photos-h2eftiggwpqnswz52rtq7s4b54.us-east-1.es.amazonaws.com"
